@@ -1,11 +1,11 @@
-##Ürünlerin verimodeli,tasarım detayları ve dokümanı analiz edildi ve gerekli olan veriler yalın bir sekilde tasarlanıp, codefirst yaklaşımı ile veri tabanı oluşturuldu.
--Setre.DataAccess Katmanında bu işlemler incelenebilir.
--Sql ile ilgili script projeye eklendi.
+## Ürünlerin verimodeli,tasarım detayları ve dokümanı analiz edildi ve gerekli olan veriler yalın bir sekilde tasarlanıp, codefirst yaklaşımı ile veri tabanı oluşturuldu.
+- Setre.DataAccess Katmanında bu işlemler incelenebilir.
+- Sql ile ilgili script projeye eklendi.
 
-##İstenilen mimari,teknoloji ve paternler kullanıldı.
+## İstenilen mimari,teknoloji ve paternler kullanıldı.
 - Çok katmanlı mimari,Generic Repository pattern, Entity Framework Core
 
-##Crud işlemleri için katmanlı yapı mimariye uygun generic bir abstract class oluşturuldu.
+## Crud işlemleri için katmanlı yapı mimariye uygun generic bir abstract class oluşturuldu.
 ```
 namespace Setre.Business.Base
 {
@@ -169,8 +169,8 @@ namespace Setre.Business.Base
 ```
 
 
-##Crud işlemlerin hepsi yapılmaktadır.Ayrıca  Tek bir endpoint ten arama, filtreleme ve sıralama işlemlerini yapılan generic method yazıldı.
--FilterDataExtension.cs=> Bu method db'ye yapılan her sorgu için kullanılabilir. 
+## Crud işlemlerin hepsi yapılmaktadır.Ayrıca  Tek bir endpoint ten arama, filtreleme ve sıralama işlemlerini yapılan generic method yazıldı.
+- FilterDataExtension.cs=> Bu method db'ye yapılan her sorgu için kullanılabilir. 
 
 * FilterResponseModel, FilterQueryParams, FilterPaggingInfo classları oluşturuldu.
 
@@ -345,11 +345,11 @@ namespace Setre.Business.Base
     }
 }
     ```
-    ##Frontend teknolojisi olarak Blazor kullanıldı.Normalde Mvc Teknolojisi ile bu geliştirme yapılabilirdi.Fakat component yapısına daha uygun oldugunu düşündüğüm için blazor kullandım.
+    ## Frontend teknolojisi olarak Blazor kullanıldı.Normalde Mvc Teknolojisi ile bu geliştirme yapılabilirdi.Fakat component yapısına daha uygun oldugunu düşündüğüm için blazor kullandım.
     -basit olarak sayfaya login ve registir işlemleri yapılıyor.
     -Basit token kullanımı yapıldı.(Jwt Bear)
     -Sayfalama işlemleri için hazır kütüphane kullanıldı.(Radzen)
     -InMemory cacheleme işlemi yapıldı.(GetById metodu)
     
-    ##Kullanıcı uyarıları için Setre.Common katmanı yapıldı.
+    ## Kullanıcı uyarıları için Setre.Common katmanı yapıldı.
       -UI tarafında Blazor.Toaster kutuphanesi kullanılarak uyarılar kullanıcıya aktarıldı.
