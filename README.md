@@ -6,7 +6,7 @@
 - Çok katmanlı mimari,Generic Repository pattern, Entity Framework Core
 
 ## Crud işlemleri için katmanlı yapı mimariye uygun generic bir abstract class oluşturuldu.
-```
+```ruby
 namespace Setre.Business.Base
 {
     public class ServiceAbstractBase<TEntity, TModel> : IServiceBase<TEntity, TModel> where TEntity : class, new() where TModel : class, new()
@@ -174,7 +174,7 @@ namespace Setre.Business.Base
 
 * FilterResponseModel, FilterQueryParams, FilterPaggingInfo classları oluşturuldu.
 
-```
+```ruby
     public class FilterPaggingInfo
     {
         
@@ -204,9 +204,9 @@ namespace Setre.Business.Base
             }
         }
     }
-   ``` 
+  ``` 
 
-   ``` 
+  ```ruby
     public class FilterQueryParams
     {
         public int PageSize { get; set; } = 10;
@@ -222,11 +222,12 @@ namespace Setre.Business.Base
 
         public FilterPaggingInfo PaggingInfo { get; set; }
     }
-    ```
+   ```
     
-    * FilterDataExtension adında IQueryable extend eden method yazıldı.
+   ## FilterDataExtension adında IQueryable extend eden method yazıldı.
     
-    ```
+   
+   ```ruby
     public static FilterResponseModel<T> GetDataAndPaggingInfo<T> (this IQueryable<T> dbEntities,FilterQueryParams queryParams) where T : class
         {
             FilterResponseModel<T> filterResponse = new FilterResponseModel<T>();
@@ -314,9 +315,9 @@ namespace Setre.Business.Base
         }
     ```
     
-    *Urun listelemede kullanıldı.
+    ## Urun listelemede kullanıldı.
     
-    ```
+    ```ruby
     namespace Setre.Business.Implementaion
     {
     public class ProductService : ServiceAbstractBase<Product, ProductModel>
@@ -346,15 +347,20 @@ namespace Setre.Business.Base
                
         }
     }
-     ```
+   ```
     
    ## Frontend teknolojisi olarak Blazor kullanıldı.Normalde Mvc Teknolojisi ile bu geliştirme yapılabilirdi.Fakat component yapısına daha uygun oldugunu düşündüğüm için blazor kullandım.
+   
     -basit olarak sayfaya login ve registir işlemleri yapılıyor.
     -Basit token kullanımı yapıldı.(Jwt Bear)
     -Sayfalama işlemleri için hazır kütüphane kullanıldı.(Radzen)
     -InMemory cacheleme işlemi yapıldı.(GetById metodu)
     
-    ## Kullanıcı uyarıları için Setre.Common katmanı yapıldı.
+   ## Kullanıcı uyarıları için Setre.Common katmanı yapıldı.
       -UI tarafında Blazor.Toaster kutuphanesi kullanılarak uyarılar kullanıcıya aktarıldı.
    
-    
+   ## Api katmanı ilk ayaga kalkısında default olarak bir kullanıcı start.up dosyasında tanımlamdı.Bilgileri appsetting.json dosyasına eklendı.
+   
+   ## Api ilk ayaga kalkısında  appsetting.json dosyası(defaultconnection) kullanıcı bilgisayarına gore duzenlenmelidir.
+   
+   
