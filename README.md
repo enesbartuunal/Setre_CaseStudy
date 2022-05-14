@@ -204,9 +204,9 @@ namespace Setre.Business.Base
             }
         }
     }
-    ```
+    
 
-    ```
+    
     public class FilterQueryParams
     {
         public int PageSize { get; set; } = 10;
@@ -215,9 +215,7 @@ namespace Setre.Business.Base
         public bool SortingDirection { get; set; } = false; //false = asc, true = desc
         public string SearchValue { get; set; } = null;
     }
-    ```
-
-    ```
+    
     public class FilterResponseModel<T> where T: class
     {
         public List<T> DataList { get; set; }
@@ -225,7 +223,9 @@ namespace Setre.Business.Base
         public FilterPaggingInfo PaggingInfo { get; set; }
     }
     ```
+    
     * FilterDataExtension adında IQueryable extend eden method yazıldı.
+    
     ```
     public static FilterResponseModel<T> GetDataAndPaggingInfo<T> (this IQueryable<T> dbEntities,FilterQueryParams queryParams) where T : class
         {
@@ -345,7 +345,8 @@ namespace Setre.Business.Base
     }
 }
     ```
-    ## Frontend teknolojisi olarak Blazor kullanıldı.Normalde Mvc Teknolojisi ile bu geliştirme yapılabilirdi.Fakat component yapısına daha uygun oldugunu düşündüğüm için blazor kullandım.
+   
+    ##  Frontend teknolojisi olarak Blazor kullanıldı.Normalde Mvc Teknolojisi ile bu geliştirme yapılabilirdi.Fakat component yapısına daha uygun oldugunu düşündüğüm için blazor kullandım.
     -basit olarak sayfaya login ve registir işlemleri yapılıyor.
     -Basit token kullanımı yapıldı.(Jwt Bear)
     -Sayfalama işlemleri için hazır kütüphane kullanıldı.(Radzen)
