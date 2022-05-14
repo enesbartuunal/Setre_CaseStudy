@@ -363,4 +363,6 @@ namespace Setre.Business.Base
    
    ## Api ilk ayaga kalkısında  appsetting.json dosyası(defaultconnection) kullanıcı bilgisayarına gore duzenlenmelidir.
    
+   ## Setre.Api katmanında proje ilk ayaga kalkısında  StaticFiles ve içerisinde images dosyası kontrol edilmeli, proje çalıştırılmadan önce bu dosyaların oluşturulmuş olması gereklidir.
+   -bu işlemi ve image upload service ve controllerını urun fotosu için yapmıştım fakat  foto olmadıgı için kullanamadım.
    
