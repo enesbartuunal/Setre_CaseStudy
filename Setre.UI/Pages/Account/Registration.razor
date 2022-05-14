@@ -1,0 +1,71 @@
+﻿@page "/signup"
+<h3>Welcome</h3>
+
+@if (ShowRegistrationErrors)
+{
+    <div class="alert alert-danger" role="alert">
+        @foreach (var error in Errors)
+        {
+            <p>@error</p>
+        }
+    </div>
+}
+<EditForm Model="signUpModel" OnValidSubmit="Register" class="card card-body bg-light mt-5">
+    <DataAnnotationsValidator />
+    <div class="form-group row">
+        <label for="email" class="col-md-2 col-form-label">Email:</label>
+        <div class="col-md-10">
+            <InputText id="email" class="form-control" @bind-Value="signUpModel.Email" />
+            <ValidationMessage For="@(() => signUpModel.Email)" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="password" class="col-md-2 col-form-label">Password:</label>
+        <div class="col-md-10">
+            <InputText type="password" id="password" class="form-control" @bind-Value="signUpModel.Password" />
+            <ValidationMessage For="@(() => signUpModel.Password)" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="confirm" class="col-md-2 col-form-label">Confirm Password:</label>
+        <div class="col-md-10">
+            <InputText type="password" id="confirm" class="form-control" @bind-Value="signUpModel.ConfirmPassword" />
+            <ValidationMessage For="@(() => signUpModel.ConfirmPassword)" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="submit" class="btn btn-success">Sign Up</button>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private SignUpModel signUpModel = new SignUpModel();
+    [Inject]
+    public IAuthenticationHttpService Service { get; set; }
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    [Inject]
+    public IToastService toastService { get; set; }
+
+    public bool ShowRegistrationErrors { get; set; }
+    public IEnumerable<string> Errors { get; set; }
+
+    public async Task Register()
+    {
+        ShowRegistrationErrors = false;
+        var result = await Service.RegisterUser(signUpModel);
+        if (!result.IsSuccess)
+        {
+            Errors = result.Data;
+            ShowRegistrationErrors = true;
+        }
+        else
+        {
+            toastService.ShowSuccess(result.Message);
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}

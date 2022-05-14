@@ -1,0 +1,16 @@
+﻿@inherits LayoutComponentBase
+@using Blazored.Toast.Configuration
+<div class="page">
+ 
+
+    <div class="main">
+        <div class="top-row px-4 ">
+            <Setre.UI.Pages.Account.AuthLinks></Setre.UI.Pages.Account.AuthLinks>
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+    <Blazored.Toast.BlazoredToasts Position="ToastPosition.BottomRight" Timeout="10" IconType="Blazored.Toast.IconType.FontAwesome" SuccessClass="success-toast-override" SuccessIcon="fa fa-thumbs-up" ErrorIcon="fa fa-bug" />
+</div>

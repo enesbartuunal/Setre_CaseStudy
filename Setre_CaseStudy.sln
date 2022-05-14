@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setre.DataAccess", "Setre.DataAccess\Setre.DataAccess.csproj", "{1F71AE60-9AE1-42AD-8279-74BA6E84079C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setre.Common", "Setre.Common\Setre.Common.csproj", "{DE80588C-1549-4E7A-B024-1F57D7B6B339}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setre.Business", "Setre.Business\Setre.Business.csproj", "{D89B7816-C9BE-4275-B79C-32CC8C218596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setre.Models", "Stere.Models\Setre.Models.csproj", "{D223FBBC-EDA5-4576-A419-B43743A59D98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setre.Api", "Setre.Api\Setre.Api.csproj", "{D7EC266B-E2E4-48B5-811D-7D2ED2325B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setre.UI", "Setre.UI\Setre.UI.csproj", "{89AB69EB-F805-4281-86AB-53F553760AD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F71AE60-9AE1-42AD-8279-74BA6E84079C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F71AE60-9AE1-42AD-8279-74BA6E84079C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F71AE60-9AE1-42AD-8279-74BA6E84079C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F71AE60-9AE1-42AD-8279-74BA6E84079C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE80588C-1549-4E7A-B024-1F57D7B6B339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE80588C-1549-4E7A-B024-1F57D7B6B339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE80588C-1549-4E7A-B024-1F57D7B6B339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE80588C-1549-4E7A-B024-1F57D7B6B339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89B7816-C9BE-4275-B79C-32CC8C218596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89B7816-C9BE-4275-B79C-32CC8C218596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89B7816-C9BE-4275-B79C-32CC8C218596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89B7816-C9BE-4275-B79C-32CC8C218596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D223FBBC-EDA5-4576-A419-B43743A59D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D223FBBC-EDA5-4576-A419-B43743A59D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D223FBBC-EDA5-4576-A419-B43743A59D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D223FBBC-EDA5-4576-A419-B43743A59D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7EC266B-E2E4-48B5-811D-7D2ED2325B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7EC266B-E2E4-48B5-811D-7D2ED2325B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7EC266B-E2E4-48B5-811D-7D2ED2325B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7EC266B-E2E4-48B5-811D-7D2ED2325B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89AB69EB-F805-4281-86AB-53F553760AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89AB69EB-F805-4281-86AB-53F553760AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89AB69EB-F805-4281-86AB-53F553760AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89AB69EB-F805-4281-86AB-53F553760AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E586B9BB-5F71-4B40-A0C0-B774BD5A58E0}
+	EndGlobalSection
+EndGlobal

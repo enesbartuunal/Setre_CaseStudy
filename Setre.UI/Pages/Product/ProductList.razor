@@ -1,0 +1,29 @@
+﻿
+
+
+<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="12" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true" Data="@ProductsList" TItem="ProductModel" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or">
+    <Columns>
+        <RadzenDataGridColumn TItem="ProductModel" Property="ProductID" Filterable="false" Title="ID" Frozen="true" Width="70px" TextAlign="TextAlign.Center" />
+        <RadzenDataGridColumn TItem="ProductModel" Property="ProductName" Title="ProductName" Frozen="true" Width="140px" />
+        <RadzenDataGridColumn TItem="ProductModel" Property="QuantityPerUnit" Title="QuantityPerUnit" Width="140px" />
+        <RadzenDataGridColumn TItem="ProductModel" Property="ReorderLevel" Title="ReorderLevel" Width="200px" />
+        <RadzenDataGridColumn TItem="ProductModel" Property="UnitPrice" Title="UnitPrice" Width="100px" />
+        <RadzenDataGridColumn TItem="ProductModel" Property="UnitsInStock" Title="UnitsInStock" Width="140px" />
+        <RadzenDataGridColumn TItem="ProductModel" Property="UnitsOnOrder" Title="UnitsOnOrder"  Width="140px" />
+
+    </Columns>
+</RadzenDataGrid>
+
+@code {
+    [Inject]
+    public IProductHttpService Service { get; set; }
+
+
+    public List<ProductModel> ProductsList { get; set; } = new List<ProductModel>();
+
+    protected async override Task OnInitializedAsync()
+    {
+        var data = await Service.GetProductsByCategory();
+        ProductsList = data.Data.ToList();
+    }
+}
