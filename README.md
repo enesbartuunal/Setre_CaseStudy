@@ -204,9 +204,9 @@ namespace Setre.Business.Base
             }
         }
     }
-    
+   ``` 
 
-    
+   ``` 
     public class FilterQueryParams
     {
         public int PageSize { get; set; } = 10;
@@ -313,10 +313,12 @@ namespace Setre.Business.Base
             return filterResponse;
         }
     ```
+    
     *Urun listelemede kullanıldı.
+    
     ```
     namespace Setre.Business.Implementaion
-{
+    {
     public class ProductService : ServiceAbstractBase<Product, ProductModel>
     {
         private readonly SetreDbContext _db;
@@ -342,11 +344,11 @@ namespace Setre.Business.Base
             return vmResponse;
         }
                
+        }
     }
-}
-    ```
-   
-    ##  Frontend teknolojisi olarak Blazor kullanıldı.Normalde Mvc Teknolojisi ile bu geliştirme yapılabilirdi.Fakat component yapısına daha uygun oldugunu düşündüğüm için blazor kullandım.
+     ```
+    
+   ## Frontend teknolojisi olarak Blazor kullanıldı.Normalde Mvc Teknolojisi ile bu geliştirme yapılabilirdi.Fakat component yapısına daha uygun oldugunu düşündüğüm için blazor kullandım.
     -basit olarak sayfaya login ve registir işlemleri yapılıyor.
     -Basit token kullanımı yapıldı.(Jwt Bear)
     -Sayfalama işlemleri için hazır kütüphane kullanıldı.(Radzen)
@@ -354,3 +356,5 @@ namespace Setre.Business.Base
     
     ## Kullanıcı uyarıları için Setre.Common katmanı yapıldı.
       -UI tarafında Blazor.Toaster kutuphanesi kullanılarak uyarılar kullanıcıya aktarıldı.
+   
+    
